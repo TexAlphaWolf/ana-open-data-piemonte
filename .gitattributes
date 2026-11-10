@@ -1,0 +1,6 @@
+* text=auto
+*.sh text eol=lf
+*.ps1 text eol=crlf
+*.png binary
+# ISTAT files are verbatim and checked by hash: no line-ending conversion
+data/** -text

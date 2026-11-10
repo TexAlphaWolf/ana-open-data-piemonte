@@ -1,0 +1,60 @@
+{
+ "kind": "bench",
+ "environment": {
+  "odpiemonte": "1.0.0",
+  "python": "3.14.10",
+  "numpy": "2.5.4",
+  "system": "Linux x86_64",
+  "cpus": 12,
+  "seed": 1,
+  "repeat": 5,
+  "command": "bench --sizes 10000,100000 --ref-max 100000 --repeat 5 --draws 50 --out /out",
+  "seconds": 13.8
+ },
+ "reading": [
+  {
+   "what": "Piemonte, 8 province files",
+   "units": 1180,
+   "rows": 120360,
+   "bytes": 3956449,
+   "seconds": 0.2663149519939907
+  },
+  {
+   "what": "all provinces and regions",
+   "units": 127,
+   "rows": 12954,
+   "bytes": 452367,
+   "seconds": 0.035298705006425735
+  }
+ ],
+ "indicators": [
+  {
+   "units": 1180,
+   "real": true,
+   "numpy": 0.0037683510017814115,
+   "literal": 0.04947766749683069
+  },
+  {
+   "units": 10000,
+   "real": false,
+   "numpy": 0.04584366900235182,
+   "literal": 0.3883830679988023
+  },
+  {
+   "units": 100000,
+   "real": false,
+   "numpy": 0.44009724199713673,
+   "literal": 3.996596220997162
+  }
+ ],
+ "report": {
+  "seconds": 0.010632328005158342
+ },
+ "verification": {
+  "checks": 53,
+  "numbers": 42991,
+  "worst": 0.0,
+  "ok": true,
+  "bad": 0
+ }
+}
